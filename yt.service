@@ -1,0 +1,13 @@
+[Unit]
+Description=Service de téléchargement YouTube
+
+[Service]
+Type=oneshot
+ExecStart=/opt/yt/yt-next-gen.sh
+User=yt
+WorkingDirectory=/opt/yt
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
